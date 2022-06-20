@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>FUNDER DETAILS</title>
+</head>
+<body>
+	<div class="container">
+	<h1> REGISTER ORGANIZATION</h1>
+	<form action="#" th:action="@{/saveFunder}" th:object="${funder}" method="post">
+	
+		<lable>FULL NAME</lable>
+		<input type="text" th:field="*{name}" placeholder="YOUR NAME"> </br></br>
+		
+		<lable>EMAIL ADDRESS</lable>
+		<input type="email" th:field="*{email}" placeholder="Email Address"> </br></br>
+		
+		<!-- buat next button ke next page -->
+	</form>
+	
+	</div>
+</body>
+</html>

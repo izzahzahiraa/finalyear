@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>ORGANIZATION REGISTRATION</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+crossorigin="anonymous">
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+<link th:href="@{/js/bootstrap.min.js}" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+</br>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">A</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/admin/mainPage">Dashboard
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Organizations</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/admin/showNewOrganizationForm">Register New Organizations</a>
+            <a class="dropdown-item" href="/admin/listOrganizations">List All Organizations</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Others</a>
+            </div> 
+        </li>
+        
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Campaigns</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/admin/listCampaigns">List All Campaigns</a>
+            <a class="dropdown-item" href="/admin/listPending">List Pending Campaigns</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Others</a>
+            </div> 
+        </li>
+        
+      </ul>
+      
+      <form class="d-flex">
+        <input class="form-control me-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+      <p></p>
+      <div>
+      <li>
+      <a href="/logout" class="btn btn-light">Logout</a></td>
+      </li>
+      </div>
+      
+    </div>
+  </div>
+</nav>
+
+ </br></br>
+ 
+ <div class="row" style="height: 17px;background: #ffffff;"></div>
+        <div class="container">
+            <div class="row mb-5" style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;), rgba(255,255,255,0);">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2 style="font-family: Alatsi, sans-serif;font-weight: bold;font-size: 45.112px;">Register Organization Account</h2>
+                    <p class="w-lg-50"><em>The only organizations that are permitted to register are those that are PEYATIM associate members.</em></p>
+                </div>
+            </div>
+            
+            <div class="row d-flex justify-content-center">
+                <div class="col" style="background: url(&quot;https://img.freepik.com/free-vector/online-registration-sign-up-login-account-smartphone-app-user-interface-with-secure-password-mobile-application-ui-web-banner-access-cartoon-people-vector-illustration_2175-1077.jpg?w=2000&quot;);height: 546.4px;background-size: contain;"><img></div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card mb-5">
+                        <div class="card-body d-flex flex-column align-items-center">
+    
+					<form action="#" th:action="@{/admin/saveOrganization}" th:object="${organization}" method="post" class="text-center">
+						<div class="mb-3"></div>
+		                <div class="mb-3"></div>
+						
+						
+							<b><label class="form-label">ORGANIZATION NAME</label></b>
+							<input  class="form-control" type="text" th:field="*{name}" placeholder="Organization Name" required >
+							</br>
+		
+							<b><label class="form-label" >ORGANIZATION ADDRESS</label></b>
+							<input class="form-control" type="text" th:field="*{address}" placeholder="Organization Address"  required >
+							</br>
+							
+							<b><label  class="form-label">STATE</label></b></br>
+							<select th:field="*{state}" required>
+							
+							    <option th:value="'Johor'" th:text="Johor"></option>
+							    <option th:value="'Kedah'" th:text="Kedah"></option>
+							    <option th:value="'Kelantan'" th:text="Kelantan"></option>
+							    <option th:value="'Kuala Lumpur'" th:text="KL"></option>
+							    <option th:value="'Labuan'" th:text="Labuan"></option>
+							    <option th:value="'Melaka'" th:text="Melaka"></option>
+							    <option th:value="'Negeri Sembilan'" th:text="NegeriSembilan"></option>
+							    <option th:value="'Pahang'" th:text="Pahang"></option>
+							    <option th:value="'Perak'" th:text="Perak"></option>
+							    <option th:value="'Perlis'" th:text="Perlis"></option>
+							    <option th:value="'Putrajaya'" th:text="Putrajaya"></option>
+							    <option th:value="'Pulau Pinang'" th:text="Penang"></option>
+							    <option th:value="'Sabah'" th:text="Sabah"></option>
+							    <option th:value="'Sarawak'" th:text="Sarawak"></option>
+							    <option th:value="'Selangor'" th:text="Selangor"></option>
+							    <option th:value="'Terangganu'" th:text="Terangganu"></option>
+							</select>
+							 
+							 </br>
+							</br>
+				
+							<b><label class="form-label">ORGANIZATION EMAIL ADDRESS</label></b>
+							<input class="form-control" type="email" th:field="*{email}" placeholder="Email Address" required >
+							</br>
+							
+							<b><label class="form-label">PASSWORD</label></b>
+							<input class="form-control" type="password" th:field="*{password}" placeholder="Password" required >
+					
+					</br>
+					<button class="btn btn-secondary" type="submit" > Register</button>
+				</form>
+				
+				</div>
+				</div>
+              </div>
+              </div>
+            </div>
+        </div>
+</body>
+</html>

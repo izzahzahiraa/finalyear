@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1> Campaign Listing</h1>
+	<table border=1>
+	<thead>
+	<tr>
+	<th>IMAGE</th>
+	<th>CAMPAIGN TITLE</th>
+	<th>DESCRIPTION</th>
+	<th>TARGET GOAL (RM)</th>
+	<th>START DATE</th>
+	<th>END DATE</th>
+	<th>STATUS</th>
+	<th>Actions</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr th:each="campaign : ${listCampaigns}">
+	<td th:text="${campaign.image}"></td>
+	<td th:text="${campaign.title}"></td>
+	<td th:text="${campaign.description}"></td>
+	<td th:text="${campaign.goal}"></td>
+	<td th:text="${campaign.datestart}"></td>
+	<td th:text="${campaign.dateend}"></td>
+	<td th:text="${campaign.status}"></td>
+	<td> <a th:href="@{/detailsCampaign/{id}(id=${campaign.id})}" class="btn btn-primary">Donate</a></td>
+	</tr>
+	</tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>List of Organization</title>
+</head>
+<body>
+<div align="center">
+<!-- @ in href = content path of your application (root app) -->
+
+	<h1> Organization List</h1>
+	<table border=1>
+	<thead>
+	<tr>
+	<th>   ID</th>
+	<th> ORGANIZATION NAME</th>
+	<th>ORGANIZATION ADDRESS</th>
+	<th> STATE</th>
+	<th> EMAIL ADDRESS</th>
+	<th> PASSWORD</th>
+	<th> ROLE</th>
+	<th> STATUS</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr th:each="organization : ${allOrganizations}">
+	<td th:text="${organization.id}"></td>
+	<td th:text="${organization.name}"></td>
+	<td th:text="${organization.address}"></td>
+	<td th:text="${organization.state}"></td>
+	<td th:text="${organization.email}"></td>
+	<td th:text="${organization.password}"></td>
+	<td th:text="${organization.role}"></td>
+	<td th:text="${organization.enabled}"></td>
+	</tr>
+	</tbody>
+	</table>
+
+</div>
+</body>
+</html>
