@@ -60,7 +60,7 @@ public class FunderController {
 		List<Campaign> campaignDahFilter = new ArrayList<>();
 		
 		for(Campaign campaign : campaigns) {
-			if (campaign.isEnabled()) {
+			if (campaign.isEnabled()&& campaign.getStatus().equals("approved")) {
 				campaignDahFilter.add(campaign);
 			}
 		}

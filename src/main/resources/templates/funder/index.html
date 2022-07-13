@@ -10,77 +10,458 @@ crossorigin="anonymous">
 <link th:href="@{/js/bootstrap.min.js}" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 
+<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="derma/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="derma/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="derma/css/magnific-popup.css">
+    <link rel="stylesheet" href="derma/css/font-awesome.min.css">
+    <link rel="stylesheet" href="derma/css/themify-icons.css">
+    <link rel="stylesheet" href="derma/css/nice-select.css">
+    <link rel="stylesheet" href="derma/css/flaticon.css">
+    <link rel="stylesheet" href="derma/css/gijgo.css">
+    <link rel="stylesheet" href="derma/css/animate.css">
+    <link rel="stylesheet" href="derma/css/slicknav.css">
+    <link rel="stylesheet" href="derma/css/style.css">
+    <!-- <link rel="stylesheet" href="derma/css/responsive.css"> -->
+
+<style>
+
+</style>
 </head>
 
 <body>
 
-</br>
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<!-- header-start -->
 
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">ShareTheRizq</a>
-        </li>
-        
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Organizations</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/allOrganizations">All Organizations</a>
+    <header >
+        <div class="header-area">
+            <div class="header-top_area">
+                <div class="container-fluid">
+                    <div class="row" >
+                        <div class="col-xl-6 col-md-12 col-lg-8">
+                            <div class="short_contact_list">
+                                <ul>
+                                    <a style="color:black"> <i class="fa fa-phone" style="color:black">&nbsp</i> +60 3-9286 1992</a>&nbsp &nbsp
+                                    <a style="color:black"> <i class="fa fa-envelope" style="color:black">&nbsp &nbsp</i>peyatim@gmail.com</a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-lg-4">
+                            <div class="social_media_links d-none d-lg-block">
+                                <a href="https://www.facebook.com/peyatimrasmi/">
+                                    <i class="fa fa-facebook"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Others</a>
-            </div> 
-        </li>
-        
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Campaigns</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/listCampaigns">All Campaigns</a>
-            <a class="dropdown-item" href="#">Success Campaigns</a>
-            <!--  <a class="dropdown-item" href="#">List Success Campaigns</a>-->
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Others</a>
-            </div> 
-        </li> 
-      </ul>
-      
-      <form class="d-flex">
-        <input class="form-control me-sm-2" type="text" placeholder="Search" style="width: 625.8px;">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
-      <p></p>
-      
-      <!--  <li>
-      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-  		<button type="button" class="btn btn-secondary">Log in</button>
-  		<div class="btn-group" role="group">
-   		 <button id="btnGroupDrop4" type="button" class="btn btn-secondary dropdown-toggle show" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></button>
-    	<div class="dropdown-menu show" aria-labelledby="btnGroupDrop4" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 40px, 0px);" data-popper-placement="bottom-start">
-      	<a class="dropdown-item" href="/admin/mainPage">Admin</a>
-      	<a class="dropdown-item" href="/organization/mainPage"> Campaign Creator</a>
-    		</div>
-  		</div>
-		</div>
-	</li>-->
-	<div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown link
-  </a>
+            <!-- Sini ganti color untuk header -->
+            <div id="sticky-header" class="main-header-area" style="background-color:#78c1ad"  >
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="derma/img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul id="navigation">
+        							<li class="nav-item">
+          								<a class="nav-link" href="#">About Us</a>
+        							</li>
+        							
+                                        <li><a href="#" style="text-decoration:none">Campaigns <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                            
+                                                <li ><a href="/listCampaigns" style="text-decoration:none">All Campaigns</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/allOrganizations" style="text-decoration:none">Organizations</a></li>
+                                        <li><a href="#" style="text-decoration:none">Log In <i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li ><a href="/admin/mainPage" style="text-decoration:none">Admin</a></li>
+                                                <li ><a href="/organization/organizationDetails" style="text-decoration:none">Campaign Creator</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    
+                                </nav>
+                                <div class="Appointment">
+                                    <div class="book_btn d-none d-lg-block">
+                                        <a data-scroll-nav='1' a th:href ="@{/listCampaigns}" style="text-decoration:none">Make a Donation</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
 
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-      
+<!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="slider_text ">
+                            <span>Get Started Today.</span>
+                            <h3> Help the children
+                                They Need You</h3>
+                            <p>Your help can change their lifes <br>
+                                for better.</p>
+                            <a href="#" style="text-decoration:none" class="boxed-btn3">Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</nav>
+    <!-- slider_area_end -->
 
+<!-- reson_area_start  -->
+    <div class="reson_area section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb-55">
+                        <h3><span>Reasons To Give Donations</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_reson">
+                        <div class="thum">
+                            <div class="thum_1">
+                                <img src="derma/img/help/hap.png" height="500" alt="">
+                            </div>
+                        </div>
+                        <div class="help_content">
+                            <h4>Giving Donations Makes You Feel Good</h4>
+                            <p>Donate to orphans makes you feel good and fullfilled.
+                            It increases your self-esteem.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_reson">
+                        <div class="thum">
+                            <div class="thum_1">
+                                <img src="derma/img/help/difference.jpg" height="500" alt="">
+                            </div>
+                        </div>
+                        <div class="help_content">
+                            <h4>To Give Something Back</h4>
+                            <p>Giving is an opportunity to give back,
+                            which resonates if you have ever received help or donations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_reson">
+                        <div class="thum">
+                            <div class="thum_1">
+                                <img src="derma/img/help/diffr.jpg" height="500" alt="">
+                            </div>
+                        </div>
+                        <div class="help_content">
+                            <h4>You can Make a Difference</h4>
+                            <p>The over-arching purpose of NGO is to make this world a better 
+                            place. Every single dollar can make a huge change in the life of a poor person</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- reason_area_end  -->
+
+<!-- reason_start_area_start  -->
+        <!-- latest_activites_area_start  -->
+    <div class="latest_activites_area">
+        <div class=" video_bg_1 video_activite  d-flex align-items-center justify-content-center">
+            <a class="popup-video" href="https://www.youtube.com/watch?v=MG3jGHnBVQs">
+                <i class="flaticon-ui"></i>
+            </a>
+        </div>
+        
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-7">
+                    <div class="activites_info">
+                        <div class="section_title">
+                            <h3> <span>Why Donating Are</span><br>
+                                Important</h3>
+                        </div>
+                        <p >Donating to the causes or to the people you care about not only benefits them, 
+                        but it can be deeply rewarding for you too. Millions of people give to charity regular. 
+                        Whether we volunteer for organizations, 
+                        offer emotional support to those around us or donate to charities, 
+                        we all know that our donation helps millions of people around the globe.</p>
+                        </br>
+                        <p>The ability to help people in need is not something that exists only among the rich. 
+                        From the smallest gesture to the biggest one, 
+                        everyone can do something that would make a difference. 
+                        Sometimes, it is the smallest acts of charity that can have the biggest impact.</p>
+                        </br>
+                        <a th:href ="@{/listCampaigns}" style="text-decoration:none"class="boxed-btn4">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- reason_donate_area_end  -->
+    
+    </br>
+
+    
+    <!-- our_volunteer_area_start  -->
+    <div class="our_volunteer_area section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="section_title text-center mb-55">
+                        <h3><span>Our Partner</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_volenteer">
+                        <div class="volenteer_thumb">
+                            <img src="derma/img/volenteer/amal.jpg" alt="">
+                        </div>
+                        <div class="voolenteer_info d-flex align-items-end">
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a style="color:blue" href="https://www.facebook.com/Badan-Amal-Nur-Zaharah-335955743427128/"> <i class="fa fa-facebook"></i> </a>
+                                    </li>
+                                    <li>
+                                </ul>
+                            </div>
+                            <div class="info_inner">
+                                <h5>Badan Amal Nur Zaharah</h5>
+                                <p>Pahang</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_volenteer">
+                        <div class="volenteer_thumb">
+                            <img src="derma/img/volenteer/tambunan.jpg" alt="">
+                        </div>
+                        <div class="voolenteer_info d-flex align-items-end">
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a style="color:blue" href="https://www.facebook.com/rayt1979/"> <i class="fa fa-facebook"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="info_inner">
+                                <h5>Rumah Anak Yatim Tambunan</h5>
+                                <p>Sabah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_volenteer">
+                        <div class="volenteer_thumb">
+                            <img src="derma/img/volenteer/budi.jpg" alt="">
+                        </div>
+                        <div class="voolenteer_info d-flex align-items-end">
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a style="color:blue" href="https://www.facebook.com/BMNHCHEMOR/"> <i class="fa fa-facebook"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="info_inner">
+                                <h5>Rumah Budi Mulia Nurul Huda</h5>
+                                <p>Perak</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-7">
+                        <a th:href ="@{/allOrganizations}" style="text-decoration:none"class="boxed-btn4">Learn More</a>
+                </div>
+            </div>
+        </div>
+    <!-- our_volunteer_area_end  -->
+  
+    
+    <!-- footer_start  -->
+    <hr>
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-lg-4 ">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                ShareTheRizq
+                            </h3>
+                            <p class="address_text">ShareTheRizq is a crowdfunding platform owned by PEYATIM specifically built for PEYATIM and 
+                            their Orphanages Organization partners
+                            collecting donations for the sake of the orphans under their care. 
+                            </p>
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a href  ="https://www.facebook.com/peyatimrasmi/" style="text-decoration:none">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Services
+                            </h3>
+                            <ul>
+                                <li>Donate</a></li>
+                                <li>Fundraise</li>
+                                <li>Partner</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Contacts
+                            </h3>
+                            <div class="contacts">
+                                <p>+60 3-9286 1992 <br>
+                                    peyatim@gmail.com <br>
+                                    1st Floor, 37, Jalan Nirwana 39, Taman Nirwana,
+                                    68000 Ampang, Selangor
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Top News
+                            </h3>
+                            <ul class="news_links">
+                                <li>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img src="derma/img/news/news_1.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#">
+                                            <h4>School for African 
+                                                Childrens</h4>
+                                        </a>
+                                        <span>Jun 12, 2019</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="thumb">
+                                        <a href="#">
+                                            <img src="derma/img/news/news_2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <a href="#">
+                                            <h4>School for African 
+                                                Childrens</h4>
+                                        </a>
+                                        <span>Jun 12, 2019</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="row">
+                    <div class="bordered_1px "></div>
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+    
+     <!-- link that opens popup -->
+
+    <!-- JS here -->
+    <script src="derma/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="derma/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="derma/js/popper.min.js"></script>
+    <script src="derma/js/bootstrap.min.js"></script>
+    <script src="derma/js/owl.carousel.min.js"></script>
+    <script src="derma/js/isotope.pkgd.min.js"></script>
+    <script src="derma/js/ajax-form.js"></script>
+    <script src="derma/js/waypoints.min.js"></script>
+    <script src="derma/js/jquery.counterup.min.js"></script>
+    <script src="derma/js/imagesloaded.pkgd.min.js"></script>
+    <script src="derma/js/scrollIt.js"></script>
+    <script src="derma/js/jquery.scrollUp.min.js"></script>
+    <script src="derma/js/wow.min.js"></script>
+    <script src="derma/js/nice-select.min.js"></script>
+    <script src="derma/js/jquery.slicknav.min.js"></script>
+    <script src="derma/js/jquery.magnific-popup.min.js"></script>
+    <script src="derma/js/plugins.js"></script>
+    <script src="derma/js/gijgo.min.js"></script>
+    <!--contact js-->
+    <script src="derma/js/contact.js"></script>
+    <script src="derma/js/jquery.ajaxchimp.min.js"></script>
+    <script src="derma/js/jquery.form.js"></script>
+    <script src="derma/js/jquery.validate.min.js"></script>
+    <script src="derma/js/mail-script.js"></script>
+
+    <script src="derma/js/main.js"></script>
+        
+       
+</br>
+</br>
+</br>
 <div align="center">
 <h1>Spring Boot Thymeleaf Form</h1>
 <a th:href ="@{/admin/showNewOrganizationForm}">admin Register New Organization</a>
@@ -100,6 +481,7 @@ crossorigin="anonymous">
 <a th:href ="@{/organization/showNewCampaignForm}">Organization create campaign</a>
 <a th:href ="@{/organization/listCampaigns}">Organization view list campaign</a>
 </div>
+
 
 
 </body>

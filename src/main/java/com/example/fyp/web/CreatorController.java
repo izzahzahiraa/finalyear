@@ -1,11 +1,15 @@
 package com.example.fyp.web;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.domain.JpaSort.Path;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
@@ -89,16 +93,35 @@ public class CreatorController {
 		
 	//save campaign into db 
 		@PostMapping("/saveCampaign")
-		public String saveCampaign(@AuthenticationPrincipal OrganizationDetails organizationLog, @ModelAttribute("campaign") Campaign campaign) {
+		public String saveCampaign(@AuthenticationPrincipal OrganizationDetails organizationLog, @ModelAttribute("campaign") Campaign campaign,
+				@RequestParam("fileImage")MultipartFile multipartFile) throws IOException {
 			
 			Organization organization = organizationService.getOrganizationByEmail(organizationLog.getUsername());
 			campaign.setOrganization(organization);
 	
 			// normalize the file path
-	        //String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-
+	        String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+	        campaign.setImage(fileName);
+	        
 			//save campaign into db
-			campaignService.saveCampaign(campaign);
+			Campaign savedCampaign= campaignService.saveCampaign(campaign);
+			
+			String uploadDir="./campaign-image/" + savedCampaign.getId();
+		
+			Path uploadPath= Paths.get(uploadDir);
+			
+			if(!Files.exists(uploadPath)) {
+				Files.createDirectories(uploadPath);
+			}
+			
+			try (InputStream inputStream=multipartFile.getInputStream()){
+			Path filePath=uploadPath.resolve(fileName);
+			System.out.println(filePath.toFile().getAbsolutePath());
+			Files.copy(inputStream,filePath,StandardCopyOption.REPLACE_EXISTING);  
+			
+			} catch (IOException e) {
+				throw new IOException("Could not save uploaded file:" + fileName);
+			}
 			
 			return "redirect:/organization/listCampaigns";
 		}

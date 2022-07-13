@@ -22,9 +22,8 @@ public class CampaignServiceImpl implements CampaignService {
 	}
 
 	@Override
-	public void saveCampaign(Campaign campaign) {
-		// TODO Auto-generated method stub
-		this.campaignRepository.save(campaign);
+	public Campaign saveCampaign(Campaign campaign) {
+		return this.campaignRepository.save(campaign);
 		
 	}
 

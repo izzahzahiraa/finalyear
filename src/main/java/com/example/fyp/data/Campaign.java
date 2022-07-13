@@ -1,5 +1,4 @@
 package com.example.fyp.data;
-import java.sql.Blob;
 import java.sql.Date;
 import java.util.List;
 
@@ -14,6 +13,9 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+
 
 
 @Entity
@@ -28,7 +30,7 @@ public class Campaign {
 	
 	@Lob
 	@Column(name="campaign_pic")
-	private byte[] image=null;
+	private String image=null;
 	
 	@Column(name="campaign_title")
 	private String title;
@@ -70,11 +72,11 @@ public class Campaign {
 		this.id = id;
 	}
 
-	public byte[] getImage() {
+	public String getImage() {
 		return image;
 	}
 
-	public void setImage(byte[] image) {
+	public void setImage(String image) {
 		this.image = image;
 	}
 
@@ -159,6 +161,12 @@ public class Campaign {
 		this.donations = donations;
 	}
 	
+	@Transient
+	public String getCampaignImagePath() {
+		if(image==null || id == 0L) return null;
+		
+		return "/campaign-image/" + id + "/" + image;
+	}
 	
 	
 	

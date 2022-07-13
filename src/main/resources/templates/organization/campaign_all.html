@@ -89,7 +89,7 @@ crossorigin="anonymous">
 	<thead>
 	<tr>
 	<th>ID</th>
-	<!-- <th>IMAGE</th>-->
+	<th>IMAGE</th>
 	<th>CAMPAIGN TITLE</th>
 	<th>DESCRIPTION</th>
 	<th>TARGET GOAL (RM)</th>
@@ -101,7 +101,10 @@ crossorigin="anonymous">
 	<tbody>
 	<tr th:each="campaign : ${listCampaigns}">
 	<td th:text="${campaign.id}"></td>
-	<!--<td th:text="${campaign.image}"></td>-->
+	<td>
+		<img th:src="@{${campaign.CampaignImagePath}}">
+	</td>
+	 <!--th:text="${campaign.image}"></td>-->
 	<td th:text="${campaign.title}"></td>
 	<td th:text="${campaign.description}"></td>
 	<td th:text="${campaign.goal}"></td>

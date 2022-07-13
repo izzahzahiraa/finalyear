@@ -87,23 +87,25 @@ crossorigin="anonymous">
                         <div class="card-body d-flex flex-column align-items-center">
                         
 		<div class="container">
-		<form action="#" th:action="@{/organization/saveCampaign}" th:object="${campaign}" method="post">
+		<form action="#" th:action="@{/organization/saveCampaign}" th:object="${campaign}" method="post" enctype="multipart/form-data">
 		<div class="mb-3"></div>
 		<div class="mb-3"></div>
 		
 		<!-- <input type="hidden" th:field="*{image}"> </br></br>-->
 		<b><label class="form-label">Upload Image</label></b>
-		<input class="form-control" type="file" name="image" th:field="*{image}"></br>
+		<input class="form-control" type="file" name="fileImage" id="fileImage" accept="image/png , image/jpeg" ></br>
+		
 		<label class="form-label">Title of Campaign</label>
-		<input class="form-control" type="text" th:field="*{title}" required> </br>
+		<input class="form-control" type="text" th:field="*{title}"> </br>
+		
 		<label class="form-label">Description</label>
-		<input class="form-control" type="text" th:field="*{description}" required></br>
+		<input class="form-control" type="text" th:field="*{description}"></br>
 		<label class="form-label">Target Goal (RM)</label>
-		<input class="form-control" type="number" th:field="*{goal}" required> </br>
+		<input class="form-control" type="number" th:field="*{goal}"> </br>
 		<label class="form-label">Start Date</label>
-		<input class="form-control" type="date" th:field="*{datestart}" required> </br>
+		<input class="form-control" type="date" th:field="*{datestart}"> </br>
 		<label class="form-label">End Date</label>
-		<input class="form-control" type="date" th:field="*{dateend}" required> </br>
+		<input class="form-control" type="date" th:field="*{dateend}"> </br>
 		
 
 		<button type="submit" class="btn btn-outline-success"> CREATE NEW CAMPAIGN</button>
