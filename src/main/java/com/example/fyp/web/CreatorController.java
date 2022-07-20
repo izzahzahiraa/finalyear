@@ -41,6 +41,15 @@ public class CreatorController {
 	@Autowired
 	UserDetailsService userDetailsService;
 
+	
+	//display main page organization
+		@GetMapping("/mainPage")
+		public String mainPage(Model model) {
+			model.addAttribute("listOrganizations",organizationService.getAllOrganization() );
+			return "organization/main";
+			
+		}
+		
 	//display details of organization
 	 
 		@GetMapping("/organizationDetails")
@@ -126,6 +135,20 @@ public class CreatorController {
 			return "redirect:/organization/listCampaigns";
 		}
 		
+		//save campaign into db 
+				@PostMapping("/updateCampaign")
+				public String updateCampaign(@AuthenticationPrincipal OrganizationDetails organizationLog, @ModelAttribute("campaign") Campaign campaign){
+					
+					Organization organization = organizationService.getOrganizationByEmail(organizationLog.getUsername());
+					campaign.setOrganization(organization);
+
+					//save campaign into db
+					Campaign savedCampaign= campaignService.saveCampaign(campaign);
+
+					return "redirect:/organization/listCampaigns";
+				}
+		
+		
 	
 		//display pending campaign
 			@GetMapping("/listPending")
@@ -193,8 +216,17 @@ public class CreatorController {
 					
 					//call delete employee method
 					this.campaignService.deleteCampaignById(id);
-					return "redirect:/organization/listCampaigns";
+					return "redirect:/organization/campaign_all";
 				}
+			
+			//list all donation history
+			
+			
+			//list donation history according to campaign
+			
+			
+				
+				
 	
 	
 		

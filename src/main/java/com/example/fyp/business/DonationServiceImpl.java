@@ -3,14 +3,14 @@ package com.example.fyp.business;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Service;
 
 import com.example.fyp.data.Donation;
 import com.example.fyp.data.DonationRepository;
 import com.example.fyp.data.Funder;
 import com.example.fyp.data.FunderRepository;
 
-
+@Service
 public class DonationServiceImpl implements DonationService {
 
 	@Autowired
@@ -27,7 +27,7 @@ public class DonationServiceImpl implements DonationService {
 
 	@Override
 	public void saveDonation(Donation donation) {
-		// TODO Auto-generated method stub
+		this.donationRepository.save(donation);
 		
 	}
 

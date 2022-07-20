@@ -88,16 +88,13 @@ crossorigin="anonymous">
                         <div class="card-body d-flex flex-column align-items-center">
                         
 		<div class="container">
-		<form action="#" th:action="@{/organization/saveCampaign}" th:object="${campaign}" method="post">
 		<div class="mb-3"></div>
 		<div class="mb-3"></div>
 	
-		<form action="#" th:action="@{/organization/saveCampaign}" th:object="${campaign}" method="post">
+		<form action="#" th:action="@{/organization/updateCampaign}" th:object="${campaign}" method="post">
 		
 		<!-- <input type="hidden" th:field="*{image}"> </br></br>-->
 		<input type="hidden" th:field="*{id}" readonly>
-		<b><label class="form-label">Upload Image</label></b>
-		<input class="form-control" type="file" name="image" th:field="*{image}"></br>
 		<b><label class="form-label">Title of Campaign</label></b>
 		<input class="form-control" type="text" th:field="*{title}" required> </br>
 		<b><label class="form-label">Description</label></b>

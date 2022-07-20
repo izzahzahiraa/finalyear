@@ -172,8 +172,9 @@ img {
     <div class="container">
             <div class="row justify-content-end">
                 <div class="col-lg-7">
-                        <a th:href ="@{@{/listCampaigns}}" style="text-decoration:none"class="boxed-btn4">Back</a>
-                        <a th:href ="@{/allOrganizations}" style="text-decoration:none"class="boxed-btn4">Donate</a>
+                        <a th:href ="@{/listCampaigns}" style="text-decoration:none"class="boxed-btn4">Back</a>
+                        <a th:href ="@{/donateCampaign/{id}(id=${campaign.id})}" style="text-decoration:none"class="boxed-btn4">Donate</a>
+                        
                 </div>
             </div>
         </div>

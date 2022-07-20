@@ -23,8 +23,11 @@ public class Donation {
 	@Column(name="donation_type")
 	private String donationtype;
 	
-	@Column(name="accnumber")
-	private String accnumber;
+	@Column(name="donation_name")
+	private String name;
+	
+	@Column(name="donation_email")
+	private String email;
 	
 	@Column(name="donation_amount")
 	private double donationamount;
@@ -54,13 +57,20 @@ public class Donation {
 		this.donationtype = donationtype;
 	}
 
-	
-	public String getAccnumber() {
-		return accnumber;
+	public String getName() {
+		return name;
 	}
 
-	public void setAccnumber(String accnumber) {
-		this.accnumber = accnumber;
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public double getDonationamount() {
